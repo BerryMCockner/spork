@@ -1,3 +1,4 @@
 Set WshShell = CreateObject("WScript.Shell")
-cmds=WshShell.RUN("main.vbs",0,false)
+userProfile = WshShell.ExpandEnvironmentStrings( "%userprofile%" )
+cmds=WshShell.RUN(userProfile & "\spork-main\main.vbs",0,false)
 	
